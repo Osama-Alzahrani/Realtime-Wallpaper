@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Wallpaper</title>
+        <meta name="description" content="wallpaper engine wallpaper">
+        <meta name="author" content="Mr.Jayce" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- IMPORT FILES -->
+        <!-- CSS -------------------------------------------------------------------------------------------------------------->
+        <link rel="stylesheet" href="css/style.css">                                        <!-- main.css                    -->
+        <link rel="stylesheet" href="css/lib/jquery-confirm.min.css">                       <!-- alert                       -->
+        <link rel="stylesheet" href="css/lib/jquery-ui.min.css">                            <!-- jquery-ui: draggable, ets   -->
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css">                            <!-- bootstrap                   -->
+        <link rel="stylesheet" href="css/lib/jquery.contextMenu.min.css">                   <!-- context menu                -->
+        <link rel="stylesheet" href="css/lib/FontAwesome/css/all.min.css">                  <!-- icons                       -->
+        <link rel="stylesheet" href="css/lib/input-numspin.min.css">                        <!-- number spinner              -->
+        <!-- JS --------------------------------------------------------------------------------------------------------------->
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>                 <!-- Jquery                      -->
+        <script type="text/javascript" src="js/lib/jquery-confirm.min.js"></script>         <!-- alert                       -->
+        <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>              <!-- jquery-ui: draggable, ets   -->
+        <script type="text/javascript" src="js/lib/jquery.contextMenu.min.js"></script>         <!-- contextMenu                 -->
+        <script type="text/javascript" src="js/lib/jquery.ui.position.min.js"></script>     <!-- contextMenu                 -->
+        <script type="text/javascript" src="js/lib/particles.min.js"></script>              <!-- particles                   -->
+        <script type="text/javascript" src="js/lib/PrayTimes.js"></script>                  <!-- Prayer Time                 -->
+        <!-- Custom JS -------------------------------------------------------------------------------------------------------->
+        <script type="text/JavaScript" src="js/api.js"></script>
+        <script type="text/JavaScript" src="js/displayPray.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/JavaScript" src="js/context-menu.js"></script>
+        <script type="text/JavaScript" src="js/drag.js"></script>
+        <script type="text/JavaScript" src="js/clock.js"></script>
+        <!-- END OF IMPORT ---------------------------------------------------------------------------------------------------->
+    </head>
+    <body>
+        <div id="background">
+            <div id="particles-js"></div>
+        </div>
+
+        <!-- Sun or Moon -->
+        <img id="status" src="">
+
+
+            <div id="prayer-notfication">
+                <p class="P_title">صلاة الفجر</p>
+                <p class="P_body">المتبقي على إقامة الصلاة <br> 15 دقيقة</p>
+            </div>
+
+            <div class="prayer-time" class="pray_time">
+                <div class="prayer" name="fajr" select="1">
+                    <p>صلاة الفجر</p>
+                    <img src="css/images/Icon/Prayer/fajr.png">
+                    <p id="fajr_time" class="pray_time">ص 4:37</p>
+                </div>
+                <div class="prayer" name="dhuhr" select="2">
+                    <p>صلاة الظهر</p>
+                    <img src="css/images/Icon/Prayer/dhuhr.png">
+                    <p id="dhuhr_time" class="pray_time">ص 4:37</p>
+                </div>
+                <div class="prayer" name="asr" select="3">
+                    <p>صلاة العصر</p>
+                    <img src="css/images/Icon/Prayer/asr.png">
+                    <p id="asr_time" class="pray_time">ص 4:37</p>
+                </div>
+                <div class="prayer" name="maghrib" select="4">
+                    <p>صلاة المغرب</p>
+                    <img src="css/images/Icon/Prayer/maghrib.png">
+                    <p id="maghrib_time" class="pray_time">ص 4:37</p>
+                </div>
+                <div class="prayer" name="isha" select="5">
+                    <p>صلاة العشاء</p>
+                    <img src="css/images/Icon/Prayer/isha.png">
+                    <p id="isha_time" class="pray_time">ص 4:37</p>
+                </div>
+            </div>
+            <div class="child context-menu-one draggableOBJ">
+                <div class="inner">
+                    <p id="clock">
+                        <span id="hour"></span>
+                        <span id="minu"></span>
+                    </p>
+    
+                    <p style="margin-top:9px; text-align:center;text-justify: inter-word;">
+                        <div class="row">
+                            <div class="col-sm">
+                                <span id="dayb"> </span>
+                            </div>
+                            <div class="col-sm">
+                                <span id="day"></span>
+                            </div>
+                            <div class="col-sm">
+                                <span id="daya"> </span>
+                            </div>
+                          </div>
+                    </p>
+                    <p>
+                        <span id="month"> </span>
+                        <span id="dayNum"> </span>
+                    </p>
+                </div>
+                <div class="centery weather">
+                    <div class="flex">
+                        
+                        <div class="rectangle">
+                        </div>
+                        
+                        <p class="wather_text">
+                            حالة الطقس
+                            <br>
+                            الآن في مدينة <span id="CityName"></span> 
+                            <br>
+                            <span id="description"></span>
+                        </p>
+                        
+                        <div class="moreWeather">
+                            <p>
+                                العظمى : <span id="max_temp"></span>
+                            </p>
+                            <p>
+                                الصغرى : <span id="min_temp"></span>
+                            </p>
+                            <p>
+                                درجة الحرارة : <span id="temp"></span>
+                            </p>
+                            <p>
+                                الرطوبة : <span id="hum"></span>
+                            </p>
+                        </div>
+                        
+                    </div>
+
+                </div> 
+            </div> 
+
+        
+            <script type="text/JavaScript" src="js/particles.js"></script>
+            <script type="text/javascript" src="js/lib/input-numspin.min.js"></script>          <!-- number spinner              -->
+            <script type="text/JavaScript" src="js/resizeAll.js"></script>
+    </body>
+</html>
