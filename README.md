@@ -1,7 +1,7 @@
 
 # Real-Time Background
 
-Background that is linked with [Openweather](https://openweathermap.org/) using API and it's build to be used in [Wallpaper Engine](https://www.wallpaperengine.io/en). So, the wallpaper will take effect of any changes in the weather.
+Background that is linked with [Openweather](https://openweathermap.org/) using API. It's build to be used in [Wallpaper Engine](https://www.wallpaperengine.io/en). So, the wallpaper will take effect of any changes in the weather.
 
 ## Features
 
@@ -19,7 +19,7 @@ Background that is linked with [Openweather](https://openweathermap.org/) using 
 
 ## How to use it
 First of all you need to have API KEY from [OpenWeather](https://openweathermap.org/).
-Get your key then open [api.js](./js/api.js) file then Replace "YOUR_API_KEY" with your key.<br>
+Get your key then open [api.js](./js/api.js) file and Replace "YOUR_API_KEY" with your key.<br>
 
 Key must be in this form:<br>
 ```
